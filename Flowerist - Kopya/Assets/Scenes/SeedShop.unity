@@ -412,6 +412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 459293479}
   - component: {fileID: 459293478}
+  - component: {fileID: 459293480}
   m_Layer: 0
   m_Name: SeedShop
   m_TagString: Untagged
@@ -434,8 +435,6 @@ MonoBehaviour:
   plantCatalogSO: {fileID: 11400000, guid: d1517ca6e09cd6e4e9e37de1bdda3093, type: 2}
   seedShopItemPrefab: {fileID: 5033515580858232718, guid: f1c6702a6b5c7c14b99e66722dd541ef, type: 3}
   seedShop: {fileID: 9006061895633333272}
-  inventoryItemPrefab: {fileID: -1277677765480013123, guid: b3ed3acae83b6b74b974c94b84b829a8, type: 3}
-  inventory: {fileID: 1454542261260544491}
 --- !u!4 &459293479
 Transform:
   m_ObjectHideFlags: 0
@@ -451,6 +450,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &459293480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459293477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc1e41956eba2b438edb1a11dae3c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seedSO: {fileID: 11400000, guid: 951c67896a328b44b8e69e392154458a, type: 2}
+  inventoryItemPrefab: {fileID: -1277677765480013123, guid: b3ed3acae83b6b74b974c94b84b829a8, type: 3}
+  inventoryParent: {fileID: 1454542261260544491}
 --- !u!1 &806002775
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,6 +495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seedInventory: {fileID: 11400000, guid: 951c67896a328b44b8e69e392154458a, type: 2}
+  plantCatalog: {fileID: 11400000, guid: d1517ca6e09cd6e4e9e37de1bdda3093, type: 2}
 --- !u!4 &806002777
 Transform:
   m_ObjectHideFlags: 0

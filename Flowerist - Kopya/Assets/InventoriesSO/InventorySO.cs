@@ -3,30 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[Serializable]
-public struct InventoryItem
-{
-    public PlantSpecies species;
-    public Sprite sprite;
-    public int inventoryQuantity;
-    
-    public InventoryItem(PlantSpecies _species, Sprite _sprite, int _inventoryQuantity)
-    {
-        species = _species;
-        sprite = _sprite;
-        inventoryQuantity = _inventoryQuantity;
-    }
 
-}
 
 [CreateAssetMenu(fileName = "Inventory", menuName = "Inventory", order = 0)]
 public class InventorySO : ScriptableObject
 {
     public Dictionary<PlantSpecies, InventoryItem> inventory = new Dictionary<PlantSpecies, InventoryItem>();
 
-    public event Action<PlantSpecies, int> OnInventoryChanged;
-   
     
+   
     public int GetQuantity(PlantSpecies plantSpecies) =>inventory[plantSpecies].inventoryQuantity;
 
     public InventoryItem GetInventoryItem(PlantSpecies species) => inventory[species];
@@ -48,8 +33,6 @@ public class InventorySO : ScriptableObject
             inventory[species] = existingItem;  // Güncellenmiş öğeyi geri koy
         }
             
-        // Fire event to notify listeners
-        OnInventoryChanged?.Invoke(species, _quantity);
 
     }
 

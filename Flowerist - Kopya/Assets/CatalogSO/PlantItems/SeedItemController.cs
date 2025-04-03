@@ -131,7 +131,7 @@ public class SeedItemController : MonoBehaviour
     public void OnPurchaseButtonPressed()
     {
         Debug.Log($"purchace button cliced");
-        
+        PurchaseHandler.Instance.PurchaseItem(_plant, _purchaseQuantity);
         _purchaseQuantity = 0;
         UpdateUI();
     }
