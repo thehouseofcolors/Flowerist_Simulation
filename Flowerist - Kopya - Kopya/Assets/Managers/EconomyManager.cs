@@ -1,5 +1,13 @@
+using System;
 using TMPro;
 using UnityEngine;
+[Serializable]
+public struct GameEconomy
+{
+    public int money;
+    public int xp;
+
+}
 
 public class EconomyManager : Singleton<EconomyManager> 
 {
@@ -19,34 +27,33 @@ public class EconomyManager : Singleton<EconomyManager>
 
     private void OnEnable()
     {
-        // Subscribe to purchase requests
         EventManager.OnSeedPurchaseRequested += HandleSeedPurchase;
-        EventManager.Instance._OnSeedPurchaseRequested.AddListener(HandleSeedPurchase);
-        
-        // Subscribe to sell requests
         EventManager.OnFlowerSellRequested += HandleFlowerSale;
-        EventManager.Instance._OnFlowerSellRequested.AddListener(HandleFlowerSale);
+        
+        //EventManager.Instance._OnFlowerSellRequested.AddListener(HandleFlowerSale);
+        //EventManager.Instance._OnSeedPurchaseRequested.AddListener(HandleSeedPurchase);
     }
 
     private void OnDisable()
     {
         // Unsubscribe from events
         EventManager.OnSeedPurchaseRequested -= HandleSeedPurchase;
-        EventManager.Instance._OnSeedPurchaseRequested.RemoveListener(HandleSeedPurchase);
         EventManager.OnFlowerSellRequested -= HandleFlowerSale;
-        EventManager.Instance._OnFlowerSellRequested.RemoveListener(HandleFlowerSale);
+        //EventManager.Instance._OnFlowerSellRequested.RemoveListener(HandleFlowerSale);
+        // EventManager.Instance._OnSeedPurchaseRequested.RemoveListener(HandleSeedPurchase);
     }
 
-    private void HandleSeedPurchase(SeedStage seed)
+    private void HandleSeedPurchase(Species species,SeedStage seed,int purchaseQuantity)
     {
-        if (TryBuySeed(seed.seedShopItem.purchasePrice))
+        if (TryBuySeed(seed.seedShopItem.purchasePrice*purchaseQuantity))
         {
+            EventManager.UpdateSeedInventory(species, 1);
             // Success logic
             Debug.Log($"Purchased {seed.sprite} seed");
         }
     }
 
-    private void HandleFlowerSale(FlowerStage flower)
+    private void HandleFlowerSale(Species species, FlowerStage flower)
     {
         SellFlower(flower);
         Debug.Log($"Sold {flower.icon} flower");

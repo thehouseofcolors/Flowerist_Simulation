@@ -58,6 +58,31 @@ public class DataManager : Singleton<DataManager>
     }
 
     // Improved economy properties
+    
+    // private int _money;
+    // public int Money
+    // {
+    //     get => _money;
+    //     set
+    //     {
+    //         _money = value;
+    //         EventManager.OnMoneyChanged?.Invoke(value);
+    //         SaveData();
+    //     }
+    // }
+
+    // private int _xp;
+    // public int XP
+    // {
+    //     get => _xp;
+    //     set
+    //     {
+    //         _xp = value;
+    //         EventManager.OnXPChanged?.Invoke(value);
+    //         CheckLevelUp();
+    //         SaveData();
+    //     }
+    // }
     public static int Money
     {
         get => PlayerPrefs.GetInt(MONEY_KEY, 1000);

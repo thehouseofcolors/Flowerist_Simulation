@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b213a017fcaf22447aaf34f38f59c6e0, type: 3}
-  m_Name: rose
+  m_Name: daisy
   m_EditorClassIdentifier: 
-  species: 0
+  species: 1
   seedStage:
-    sprite: {fileID: 21300000, guid: aebc32a581ba59c4ca8fb45903e054e3, type: 3}
+    sprite: {fileID: 21300000, guid: 022debbc99fdfb84586a2d220550c106, type: 3}
     seedShopItem:
       seedsPerPack: 10
       purchasePrice: 50
-      requiredLevel: 1
+      requiredLevel: 6
     seedStackData:
       StackQuantity: 0
   growingStage:

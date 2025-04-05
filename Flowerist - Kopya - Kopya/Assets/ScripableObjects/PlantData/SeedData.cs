@@ -13,7 +13,7 @@ public class SeedStage
 [Serializable]
 public class SeedStackData
 {
-    public int StackQuantity;
+    public int StackQuantity = 0;
 }
 [Serializable]
 public class SeedShopData
@@ -21,6 +21,7 @@ public class SeedShopData
     
     [Header("Inventory")]
     [Range(1, 100)] public int seedsPerPack = 10;
+    
     
     [Header("Commerce")]
     [Range(10, 1000)] public int purchasePrice = 50;

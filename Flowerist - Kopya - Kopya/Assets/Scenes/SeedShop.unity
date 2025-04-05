@@ -569,9 +569,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 459293477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1789411306586ed458e5f0ad06bf2747, type: 3}
+  m_Script: {fileID: 11500000, guid: 60e4466a8cac98f40ad0ccf028cd9d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  catalog:
+  - {fileID: 11400000, guid: 87de56e27b3e45e42b41512a1aa96eac, type: 2}
+  - {fileID: 11400000, guid: addbdd7bd4dedee499e87f97435b4b7a, type: 2}
+  seedShopItemPrefab: {fileID: 5033515580858232718, guid: f1c6702a6b5c7c14b99e66722dd541ef, type: 3}
+  seedShopParent: {fileID: 9006061895633333272}
 --- !u!1 &653942828
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,6 +990,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 806002781}
+  levelText: {fileID: 760847398}
+  moneyText: {fileID: 729536402}
 --- !u!4 &806002777
 Transform:
   m_ObjectHideFlags: 0
@@ -1012,15 +1019,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f4d33a2bd0002846ac202fb7d149c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _OnSeedPurchaseRequested:
-    m_PersistentCalls:
-      m_Calls: []
-  _OnFlowerSellRequested:
-    m_PersistentCalls:
-      m_Calls: []
-  _OnMoneyChanged:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &806002779
 MonoBehaviour:
   m_ObjectHideFlags: 0

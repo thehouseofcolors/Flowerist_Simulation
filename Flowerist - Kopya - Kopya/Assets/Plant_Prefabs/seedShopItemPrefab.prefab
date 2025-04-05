@@ -644,7 +644,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 200}
+  m_AnchoredPosition: {x: 0, y: 80}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3554207734675079182
@@ -704,19 +704,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 3554207734675079182}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7226d7637140d3442b4bc0e325354751, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d3730f7a27b3b04ebfab70d1956ee0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockedItemUI: {fileID: 3179234381145033606}
-  unlockedItemUI: {fileID: 3712416467530229670}
-  seedIcon: {fileID: 3490854263516881901}
-  seedNameText: {fileID: 7755855037605023137}
-  seedPackSize: {fileID: 1189131981419669073}
-  priceText: {fileID: 3956407028686753362}
-  quantityText: {fileID: 5579303449944726279}
-  totalPriceText: {fileID: 8388943857126772796}
+  lockedSeedPrefab: {fileID: 3179234381145033606}
   requiredLevelText: {fileID: 1845245546004831428}
-  purchaseButton: {fileID: 2760813849344106336}
+  unlockedSeedPrefab: {fileID: 3712416467530229670}
+  icon: {fileID: 3490854263516881901}
+  nameText: {fileID: 7755855037605023137}
+  packSizeText: {fileID: 1189131981419669073}
+  priceText: {fileID: 3956407028686753362}
+  totalPriceText: {fileID: 8388943857126772796}
+  quantityText: {fileID: 5579303449944726279}
+  buyButton: {fileID: 2760813849344106336}
   plusButton: {fileID: 1570502216080701116}
   minusButton: {fileID: 2037276011494119845}
 --- !u!1 &3712416467530229670
