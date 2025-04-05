@@ -577,6 +577,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: addbdd7bd4dedee499e87f97435b4b7a, type: 2}
   seedShopItemPrefab: {fileID: 5033515580858232718, guid: f1c6702a6b5c7c14b99e66722dd541ef, type: 3}
   seedShopParent: {fileID: 9006061895633333272}
+  seedInventoryItemPrefab: {fileID: 6830205495494529899, guid: b3ed3acae83b6b74b974c94b84b829a8, type: 3}
+  seedInventoryParent: {fileID: 1454542261260544491}
 --- !u!1 &653942828
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,12 +18,13 @@ public class SeedInventoryItem : MonoBehaviour {
     {
         EventManager.OnSeedInventoryUpdate -= HandleInventoryChange;
     }
-    public void Setup(Species species,SeedStage seed) 
+    public void Setup(Species species,SeedStage seed, int purchaseQuantity) 
     {
         _species =species;
         _seedStack = seed.seedStackData;
         icon.sprite = seed.sprite;
-        quantityText.text = $"{_seedStack.StackQuantity}$";
+        _seedStack.StackQuantity = purchaseQuantity;
+        quantityText.text = $"{_seedStack.StackQuantity}";
     }
     public void HandleInventoryChange(Species species,int quantityChange)
     {
