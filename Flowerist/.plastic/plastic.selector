@@ -1,4 +1,0 @@
-repository "Flowerist@Rengin_Celik@cloud"
-  path "/"
-    br "/main"
-    co "/main"
